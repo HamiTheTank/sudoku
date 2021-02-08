@@ -1,0 +1,93 @@
+object Form1: TForm1
+  Left = 22
+  Height = 451
+  Top = 136
+  Width = 450
+  Caption = 'Sudoku'
+  ClientHeight = 426
+  ClientWidth = 450
+  Color = clBtnFace
+  DesignTimePPI = 120
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
+  Visible = True
+  object Image1: TImage
+    Left = 88
+    Height = 334
+    Top = 40
+    Width = 334
+    OnMouseUp = Image1MouseUp
+  end
+  object Image2: TImage
+    Left = 24
+    Height = 334
+    Top = 40
+    Width = 37
+    OnMouseUp = Image2MouseUp
+  end
+  object Button1: TButton
+    Left = 152
+    Height = 25
+    Top = 384
+    Width = 91
+    Caption = 'Next Game'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 272
+    Height = 25
+    Top = 384
+    Width = 75
+    Caption = 'Reset'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 200
+    Height = 21
+    Top = 8
+    Width = 107
+    Caption = 'TIME: 0:00:00'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object MainMenu1: TMainMenu
+    left = 128
+    top = 72
+    object Menu1: TMenuItem
+      Caption = 'Menu'
+      object Ujjatek1: TMenuItem
+        Caption = 'New game'
+        OnClick = Button1Click
+      end
+      object Nehezseg1: TMenuItem
+        Caption = 'Difficulty'
+      end
+      object oplista1: TMenuItem
+        Caption = 'High scores'
+      end
+      object Kilepes1: TMenuItem
+        Caption = 'Exit'
+        OnClick = Kilepes1Click
+      end
+    end
+  end
+  object Timer1: TTimer
+    Tag = 10
+    Interval = 10
+    OnTimer = Timer1Timer
+    left = 192
+    top = 72
+  end
+end
